@@ -17,9 +17,21 @@
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
 #     artifact-name: corne_left_with_studio
 #
----
+
 include:
-  - board: nrfmicro&#x2F;nrf52840@1.3.0
-    shield: sofle_left
-  - board: nrfmicro&#x2F;nrf52840@1.3.0
-    shield: sofle_right
+  # Sofle with oled display(with nice_oled module) 
+  - board: nice_nano_v2 
+    shield: Sofle_L nice_oled
+    snippet: studio-rpc-usb-uart 
+    artifact-name: Sofle_left_oled
+  - board: nice_nano_v2
+    shield: Sofle_R nice_oled
+    artifact-name: Sofle_right_oled
+  # Sofle with nice!view display(with nice_view_custom module)
+  - board: nice_nano_v2
+    shield: Sofle_L Nice_view_config nice_view_custom
+    snippet: studio-rpc-usb-uart
+    artifact-name: Sofle_left_nice_view
+  - board: nice_nano_v2
+    shield: Sofle_R Nice_view_config nice_view_custom
+    artifact-name: Sofle_right_nice_view
